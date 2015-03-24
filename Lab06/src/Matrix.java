@@ -25,6 +25,15 @@ public class Matrix {
 		while(br.ready()) rows.add(br.readLine());
 		this.data = new double[rows.size()][rows.get(0).split(",").length];
 		
+		for(int i=0;i<data.length;i++) {
+			String row = rows.get(i);
+			String[] elements = row.split(",");
+			for(int j=0;j<elements.length;j++) {
+				elements[j] = elements[j].trim();				
+				this.data[i][j] = Double.parseDouble(elements[j]);			
+			}
+		}
+		
 		this.height = this.data.length;
 		this.width = this.data[0].length;
 	}
@@ -32,7 +41,7 @@ public class Matrix {
 	public void printMatrix() {
 		for(int i=0;i<this.height;i++) {
 			for(int j=0;j<this.width;j++) {
-				System.out.print(this.data[i][j] + ", ");
+				System.out.print(this.data[i][j] + "  ");
 			}
 			System.out.println();
 		}
