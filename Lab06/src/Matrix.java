@@ -37,5 +37,31 @@ public class Matrix {
 			System.out.println();
 		}
 	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public double[][] getData() {
+		return data;
+	}
+
+	public void setData(double[][] data) {
+		this.data = data;
+	}
+	
+	
 	
 }
